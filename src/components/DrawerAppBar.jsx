@@ -7,16 +7,17 @@ import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material';
+
 import logo from '../img/logo.png';
 import zal from '../img/zal.jpg'
+import { Link } from 'react-router-dom';
+
 const drawerWidth = 240;
-const navItems = ['Главная', 'О нас', 'Контакты'];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -33,13 +34,15 @@ function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key="Главная" disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+              <Link to='/' >
+                <Button key="Главная" sx={{ color: 'black' }}>
+                  Главная
+                </Button>
+              </Link>
             </ListItemButton>
           </ListItem>
-        ))}
       </List>
     </Box>
   );
@@ -56,10 +59,9 @@ function DrawerAppBar(props) {
     },
   });
 
-  return (
-    <Box>
+  return (<Box display="fixed">
       <ThemeProvider theme={darkTheme}>
-      <AppBar component="nav" sx={{ backgroundImage: zal}}>
+      <AppBar position="static">
         <Toolbar sx={{ display: 'flex', flexDirection: 'column' }}>
             
           <IconButton
@@ -88,13 +90,25 @@ function DrawerAppBar(props) {
                     ></Text> */}
                     
                 </Typography>
+
                 <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                     
-                    {navItems.map((item) => (
-                    <Button key={item} sx={{ color: '#fff' }}>
-                        {item}
-                    </Button>
-                    ))}
+                    
+                    <Link to='/' >
+                      <Button key="Главная" sx={{ color: '#fff' }}>
+                        Главная
+                      </Button>
+                    </Link>
+                    <Link to='/about' >
+                      <Button key="Главная" sx={{ color: '#fff' }}>
+                        О нас
+                      </Button>
+                    </Link>
+                    <Link to='/contacts' >
+                      <Button key="Главная" sx={{ color: '#fff' }}>
+                        Контакты
+                      </Button>
+                    </Link>
                 </Box>
           </Box>
           
@@ -118,8 +132,7 @@ function DrawerAppBar(props) {
           {drawer}
         </Drawer>
       </nav>
-    </Box>
-  );
+  </Box>);
 }
 
 export default DrawerAppBar;
