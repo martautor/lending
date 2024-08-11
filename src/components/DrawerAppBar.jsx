@@ -83,11 +83,6 @@ function DrawerAppBar(props) {
                     component="div"
                     sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                 >
-                    {/* <Text   
-                    element="heading"
-                    color="#4f545a"
-                    content="<<< МИР >>> FITNESS"
-                    ></Text> */}
                     
                 </Typography>
 

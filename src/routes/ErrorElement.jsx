@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 import ErrorImg from '../img/404.png'
 import logo from '../img/logo.png'
 import { Link } from "react-router-dom";

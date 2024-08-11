@@ -1,8 +1,8 @@
-// import DrawerAppBar from "../components/DrawerAppBar";
-import HomeInfo from '../components/HomeInfo';
+import Mainpage from "../components/Mainpage";
+
 
 export default function Home() {
     return (<>
-        <HomeInfo/>
+        <Mainpage/>
     </>)
 }
