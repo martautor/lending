@@ -43,6 +43,27 @@ function DrawerAppBar(props) {
               </Link>
             </ListItemButton>
           </ListItem>
+          <ListItem key="О нас" disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }}>
+              <Link to='/about' >
+                  <Button key="О нас" sx={{ color: 'black' }}>
+                    О нас
+                  </Button>
+              </Link>
+            </ListItemButton>
+          </ListItem>
+          <ListItem key="Контакты" disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }}>
+              <Link to='/contacts' >
+                <Button key="Контакты" sx={{ color: 'black' }}>
+                  Контакты
+                </Button>
+              </Link>
+            </ListItemButton>
+          </ListItem>
+              
+              
+            
       </List>
     </Box>
   );
@@ -95,12 +116,12 @@ function DrawerAppBar(props) {
                       </Button>
                     </Link>
                     <Link to='/about' >
-                      <Button key="Главная" sx={{ color: '#fff' }}>
+                      <Button key="О нас" sx={{ color: '#fff' }}>
                         О нас
                       </Button>
                     </Link>
                     <Link to='/contacts' >
-                      <Button key="Главная" sx={{ color: '#fff' }}>
+                      <Button key="Контакты" sx={{ color: '#fff' }}>
                         Контакты
                       </Button>
                     </Link>

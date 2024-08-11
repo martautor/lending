@@ -1,7 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 import Background from "./Background";
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
-
 const textShadowG = { textShadow: `-0   -1px 3px #000000,
     0   -1px 3px #000000,
     -0    1px 3px #000000,
@@ -58,7 +57,7 @@ export default function Contactpage() {
                             <Typography color={'white'} variant={isMobile ? "h8" : "h5"} sx={textShadowT} mb={2}>
                                 Мы находимся по адресу: г.Ставрополь, ул.Ленина 127
                             </Typography>
-                                <Map defaultState={{ center: [45.042343, 41.986116], zoom: 17 }} width={700} height={400}>
+                                <Map defaultState={{ center: [45.042343, 41.986116], zoom: 17 }} width={isMobile ? 250 : 700} height={400}>
                                     <Placemark defaultGeometry={[45.042390, 41.986300]} />
                                 </Map>
                             </Box>

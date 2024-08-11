@@ -1,8 +1,8 @@
 import { ImageList, ImageListItem } from "@mui/material";
-
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
 export default function CustomImageList() {
     return (
-      <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+      <ImageList sx={{ width: isMobile ? 250 : 500, height: isMobile ? 150 : 450 }} cols={3} rowHeight={164}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
             <img
